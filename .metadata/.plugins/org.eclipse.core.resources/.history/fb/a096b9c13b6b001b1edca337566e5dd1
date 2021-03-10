@@ -1,0 +1,180 @@
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+
+public class Javabasics2 {
+	
+	public static void main(String[] args) throws InterruptedException{
+		
+		System.out.print("hello bappaji");
+		
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		/*driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		driver.findElement(By.xpath("//input[@id='ctl00_mainContent_ddl_originStation1_CTXT']")).click();
+		driver.findElement(By.xpath("//a[@value='HYD']")).click();
+		Thread.sleep(2000L); // to hold or pause your test, its Java
+		
+		//driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click(); 
+		
+		// in To dropdown, since we can see location twice at TO AND FROM. if we want to select from second dropdown use above and below:
+		// if you don't want to provide indexes as above, you can use parent child relationship - xpath like below:
+		
+		driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='CCU']")).click();
+		driver.findElement(By.id("autosuggest")).sendKeys("ind"); //Autosuggest
+		Thread.sleep(2000L);
+		
+		List<WebElement> options =driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
+		
+		for(WebElement option: options)
+		{
+			if(option.getText().equalsIgnoreCase("India"))
+			{
+				Thread.sleep(3000);
+				option.click();
+				break;
+			}
+					
+		} till line 20*/
+		
+		
+		
+		/*driver.findElement(By.id("divpaxinfo")).click();
+		// so I want to click the above plus icon 5 times, its not a ideal way to write the same line of code 15times,
+		//we can put a while loop instead like below
+		
+		Thread.sleep(10L);
+		
+		int i=1; // Initializing // for 5clicks
+		while (i<=5) //  comparing
+		{
+		
+			driver.findElement(By.id("hrefIncAdt")).click();
+			i++; // adding a condition
+			
+		// without the above three conditions while loop will not execute.
+			
+		}
+		
+		driver.findElement(By.id("hrefIncChd")).click();
+		driver.findElement(By.id("hrefIncInf")).click();
+		System.out.println(driver.findElement(By.id("divpaxinfo")).getText());		
+		for(int i1=1; i1<=3; i1++) // for 3 clicks
+
+				{
+					driver.findElement(By.id("hrefIncInf")).click();
+				}
+			
+		System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
+		driver.findElement(By.id("btnclosepaxoption")).click(); */
+		
+
+		/*Assert.assertFalse(driver.findElement(By.xpath("//input[contains(@id, 'friendsandfamily')]")).isSelected());
+		//here checkbox should be not selected, thats why its false. if we expect it to be selected then we have to give asserttrue.
+		
+		System.out.println(driver.findElement(By.xpath("//input[contains(@id, 'friendsandfamily')]")).isSelected());
+		
+		driver.findElement(By.xpath("//input[contains(@id, 'friendsandfamily')]")).click();		
+		//now above, we have already selected the checkbox and verifying whether its selected using assert true, see below.
+		
+		Assert.assertTrue(driver.findElement(By.xpath("//input[contains(@id, 'friendsandfamily')]")).isSelected());
+		System.out.println(driver.findElement(By.xpath("//input[contains(@id, 'friendsandfamily')]")).isSelected());
+		
+		driver.findElement(By.xpath("//input[contains(@id, 'tudentDiscount')]")).click();
+		System.out.println(driver.findElement(By.xpath("//input[contains(@id, 'tudentDiscount')]")).isSelected());
+		
+		// below, we are verifying whether checkbox is selected and its value is true.
+		Assert.assertEquals(true, driver.findElement(By.xpath("//input[contains(@id, 'tudentDiscount')]")).isSelected());
+		
+		driver.findElement(By.id("divpaxinfo")).click();
+		System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
+		driver.findElement(By.id("ctl00_mainContent_ddl_Adult")).click(); */
+		
+		
+		
+		
+		
+		
+		
+		/*driver.get("https://www.spicejet.com/");
+		
+		driver.findElement(By.xpath("//input[@value='RoundTrip']")).click();
+		driver.findElement(By.xpath("//input[@value='OneWay']")).click();
+		driver.findElement(By.name("ctl00_mainContent_ddl_originStation1_CTXT")).click();
+		driver.findElement(By.cssSelector("a[text='Hyderabad (HYD)']")).click();
+		//driver.findElement(By.xpath("//input[@id='ctl00_mainContent_ddl_destinationStation1_CTXT'] //a[@value='BLR']")).click(); was not able to produce this
+		driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='CCU']")).click();
+		driver.findElement(By.cssSelector(".ui-state-default.ui-state-active")).click();		
+		if( driver.findElement(By.id("Div1")).getAttribute("style").contains("0.5"))
+		{
+			System.out.println("Its disabled");
+			Assert.assertTrue(true);	// assert means, checking w.r.to boolean value. since the calendar is disabled n as per requirement, true = disabled cal
+		}
+		else
+		{
+			Assert.assertTrue(false);
+		}
+		driver.findElement(By.id("divpaxinfo")).click();
+		driver.findElement(By.id("ctl00_mainContent_ddl_Adult")).click();
+		driver.findElement(By.cssSelector("input[id='ctl00_mainContent_btn_FindFlights']")).click();
+		driver.quit(); */
+		
+		
+		
+			
+		
+		
+		
+		
+		/*Assignment 1:
+			
+		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		
+		//Assert.assertFalse(driver.findElement(By.id("checkBoxOption1")).isSelected());
+		//System.out.println(driver.findElement(By.id("checkBoxOption1")).isSelected());
+		
+		driver.findElement(By.id("checkBoxOption1")).click(); // to select the checkbox
+		
+		Assert.assertTrue(driver.findElement(By.id("checkBoxOption1")).isSelected());
+		System.out.println(driver.findElement(By.id("checkBoxOption1")).isSelected());
+		
+		driver.findElement(By.id("checkBoxOption1")).click(); // to unselect the checkbox
+		
+		Assert.assertFalse(driver.findElement(By.id("checkBoxOption1")).isSelected());
+		System.out.println(driver.findElement(By.id("checkBoxOption1")).isSelected());
+		
+		System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size()); // since type is common everywhere, used type. till line 98*/
+		
+		
+		//driver.quit();
+		
+		
+			
+		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+		
+		driver.findElement(By.name("enter-name")).sendKeys("Bappa");
+		driver.findElement(By.id("alertbtn")).click();
+		System.out.println(driver.switchTo().alert().getText());
+		driver.switchTo().alert().accept();
+		
+		driver.findElement(By.name("enter-name")).sendKeys("Bappamorya");
+		driver.findElement(By.id("confirmbtn")).click();
+		System.out.println(driver.switchTo().alert().getText());
+		driver.switchTo().alert().dismiss();
+		driver.quit();
+		
+		
+		
+		
+		
+				
+	}
+}

@@ -1,0 +1,94 @@
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Javabasics2 {
+	
+	public static void main(String[] args) throws InterruptedException{
+		
+		System.out.print("hello bappaji");
+		
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		/*driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		driver.findElement(By.xpath("//input[@id='ctl00_mainContent_ddl_originStation1_CTXT']")).click();
+		driver.findElement(By.xpath("//a[@value='HYD']")).click();
+		Thread.sleep(2000L); // to hold or pause your test, its Java
+		
+		//driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click(); 
+		
+		// in To dropdown, since we can see location twice at TO AND FROM. if we want to select from second dropdown use above and below:
+		// if you don't want to provide indexes as above, you can use parent child relationship - xpath like below:
+		
+		driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='CCU']")).click();
+		driver.findElement(By.id("autosuggest")).sendKeys("ind");
+		Thread.sleep(2000L);
+		
+		List<WebElement> options =driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
+		
+		for(WebElement option: options)
+		{
+			if(option.getText().equalsIgnoreCase("India"))
+			{
+				Thread.sleep(3000);
+				option.click();
+				break;
+			}
+					
+		} till line 20*/
+		
+		driver.get("https://www.spicejet.com/");
+		driver.findElement(By.xpath("//input[contains(@id, 'friendsandfamily')]")).click();
+		
+		
+			
+		
+		
+		
+		
+		
+		
+		
+		/*driver.findElement(By.id("divpaxinfo")).click();
+		// so I want to click the above plus icon 5 times, its not a ideal way to write the same line of code 15times,
+		//we can put a while loop instead like below
+		
+		Thread.sleep(10L);
+		
+		int i=1; // Initializing // for 5clicks
+		while (i<=5) //  comparing
+		{
+		
+			driver.findElement(By.id("hrefIncAdt")).click();
+			i++; // adding a condition
+			
+		// without the above three conditions while loop will not execute.
+			
+		}
+		
+		driver.findElement(By.id("hrefIncChd")).click();
+		driver.findElement(By.id("hrefIncInf")).click();
+		System.out.println(driver.findElement(By.id("divpaxinfo")).getText());		
+		for(int i1=1; i1<=3; i1++) // for 3 clicks
+
+				{
+					driver.findElement(By.id("hrefIncInf")).click();
+				}
+			
+		System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
+		driver.findElement(By.id("btnclosepaxoption")).click(); */
+		
+		
+		
+		//driver.quit();
+		
+				
+	}
+}
